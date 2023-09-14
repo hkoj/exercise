@@ -1,0 +1,43 @@
+---
+title: "Kapittel 5"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: setup
+#| echo: false
+#| output: false
+#| message: false
+library(nycflights13)
+library(tidyverse)
+```
+
+```{r}
+#alle flygningene 1. januar
+filter(flights, month == 1, day == 1)
+```
+
+```{r}
+# Alle flygninger for november og desember
+filter(flights, month == 11 | month == 12)
+```
+
+```{r}
+# kap 5.2.4
+# ankomst forsinket med to timere eller mer
+filter(flights, arr_delay >= 120)
+```
+
+```{r}
+# kap 5.2.4
+# fly til Houston
+filter(airports, name == Houston)
+```
+
+```{r}
+# kap 5.2.4
+#ble opperert av United, American eller Delta
+
+```
+
